@@ -22,6 +22,7 @@ const createReview = async (req, res) => {
       "You have already submitted a review for this product"
     );
   }
+
   req.body.user = req.user.userId;
 
   const review = await Review.create(req.body);
